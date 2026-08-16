@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
 	
 	printf("\n\n========== Exercicio 2 ==========\n");
 	
-	//importei a biblioteca de matematica para resolver esse exercicio, você disse que não podia usar laços 
+	//importei a biblioteca de matematica para resolver esse exercicio, vocÃª disse que nÃ£o podia usar laÃ§os 
     double valorInicial, numNotacao;
     int expoente;
     
