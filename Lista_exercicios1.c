@@ -60,9 +60,19 @@ int main(int argc, char *argv[]) {
     }
     printf("\n\n========== Exercicio 4 ==========\n");
 	
+	double salarioFixo, vendasTotais, total;
+    
+    printf("Digite o salario fixo valor: ");
+	scanf("%lf", &salarioFixo);
 	
+	printf("Digite o valor total de vendas: ");
+	scanf("%lf", &vendasTotais);
 	
+	total = vendasTotais * 0.15;
 	
+	printf("Total a receber: %.2lf", total + salarioFixo);
+
+	printf("\n\n========== Exercicio 5 ==========\n");	
 	
 	
 	
