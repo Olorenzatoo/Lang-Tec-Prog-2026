@@ -24,7 +24,8 @@ int main(int argc, char *argv[]) {
 	
 	printf("\n\n========== Exercicio 2 ==========\n");
 	
-	//importei a biblioteca de matematica para resolver esse exercicio, você disse que não podia usar laços 
+	//importei a biblioteca de matematica para resolver esse exercicio, você disse que não podia usar laços
+	
     double valorInicial, numNotacao;
     int expoente;
     
@@ -59,8 +60,8 @@ int main(int argc, char *argv[]) {
         printf("%d", valorDecimal & 1);
     }
     printf("\n\n========== Exercicio 4 ==========\n");
-	
-	double salarioFixo, vendasTotais, total;
+    
+    double salarioFixo, vendasTotais, total;
     
     printf("Digite o salario fixo valor: ");
 	scanf("%lf", &salarioFixo);
@@ -71,9 +72,9 @@ int main(int argc, char *argv[]) {
 	total = vendasTotais * 0.15;
 	
 	printf("Total a receber: %.2lf", total + salarioFixo);
-
-	printf("\n\n========== Exercicio 5 ==========\n");	
-
+	
+	printf("\n\n========== Exercicio 5 ==========\n");
+	
 	int valor1, valor2, valor3, valor4, soma;
 	float media;
 	
@@ -94,29 +95,49 @@ int main(int argc, char *argv[]) {
 	
 	printf("\n\n========== Exercicio 6 ==========\n");
 	
+	int idadeDias, anos, meses, dias;
 	
+	printf("Digite sua idade em dias: ");
+	scanf("%d", &idadeDias);
 	
+	anos = idadeDias / 365;
+	idadeDias = idadeDias % 365;
 	
+	meses = idadeDias / 30;
+	dias = idadeDias % 30;
 	
+	printf("Sua idade em Ano(s), Mese(s) e Dia(s) e: %d ano(s) - %d mese(s) - %d dia(s)", anos, meses, dias);
 	
+	printf("\n\n========== Exercicio 7 ==========\n");
 	
+	double R, volume;
 	
+	printf("Digite o raio(R) de uma esfera: ");
+	scanf("%lf", &R);
 	
+	volume = (4.0/3)* 3.14159 *pow(R, 3);
 	
+	printf("O volume da esfera e de: %.2lf", volume);
 	
+	printf("\n\n========== Exercicio 8 ==========\n");
 	
+	double x1, y1, x2, y2, distancia;
 	
+	printf("Digite o valor de P1\n");
+	printf("x1 = ");
+	scanf("%lf", &x1);
+	printf("y1 = ");
+	scanf("%lf", &y1);
 	
+	printf("Digite o valor de P2\n");
+	printf("x2 = ");
+	scanf("%lf", &x2);
+	printf("y2 = ");
+	scanf("%lf", &y2);
 	
+	distancia = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2)); 
 	
+	printf("Distancia, aplicando a distancia euclidiana: %.2lf", distancia);
 	
-	
-	
-	
-	
-	
-	
-	
-    
 	return 0;
 }
