@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
 	
 	 int n, res;
 	 int bit_64, bit_32, bit_16, bit_8, bit_4, bit_2;
-	 printf("insira o valor a ser convertido: ");
+	 printf("insira o valor a ser convertido <= 64: ");
 	 scanf("%d",&n);
 	 
 	 bit_64 = n%2;
@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
 	 bit_2 = res%2;
 	 res = res/2;
 	 
- 	printf("o numero %d em bin = %d%d%d%d%d%d%d", n, res%2, bit_2, bit_4, bit_8, bit_16, bit_32, bit_64);
+ 	printf("O numero %d em binario = %d%d%d%d%d%d%d", n, res%2, bit_2, bit_4, bit_8, bit_16, bit_32, bit_64);
 	
     printf("\n\n========== Exercicio 4 ==========\n");
     
