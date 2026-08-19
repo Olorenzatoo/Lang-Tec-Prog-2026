@@ -132,6 +132,6 @@ int main(int argc, char *argv[]) {
 	
 	printf("Eh o maior: %d", maiorABC);
 	
-	printf("\n\n========== Eh o expecialista, n„o tem jeito! ===========\n");	
+	printf("\n\n========== Eh o expecialista, n√£o tem jeito! ===========\n");	
 	return 0;
 }
