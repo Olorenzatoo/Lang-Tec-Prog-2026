@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[]) {
 
-	int opcao
+	int opcao;
 	int num1, num2, inversor;
 
 	    printf("\n========== MENU DE EXERCICIOS ==========\n");
@@ -40,6 +40,7 @@ int main(int argc, char *argv[]) {
 			printf("\nValores invertidos: ");
 			printf("\nPrimeiro valor: %d", num1);
 			printf("\nSegundo valor: %d", num2);
+			break;
 		case 2:	
 			printf("\n\n========== Exercicio 2 ==========\n");
 			
@@ -57,6 +58,7 @@ int main(int argc, char *argv[]) {
 		    numNotacao = valorInicial / pow(10, expoente);
 		
 		    printf("\nNumero na forma de notacao cientifica: %.2lf x 10^%d\n", numNotacao, expoente);
+			break;
 		case 3:
 		    printf("\n\n========== Exercicio 3 ==========\n");
 			
@@ -79,6 +81,7 @@ int main(int argc, char *argv[]) {
 			 res = res/2;
 			 
 		 	printf("O numero %d em binario = %d%d%d%d%d%d%d", n, res%2, bit_2, bit_4, bit_8, bit_16, bit_32, bit_64);
+		 	break;
 		case 4:
 		    printf("\n\n========== Exercicio 4 ==========\n");
 		    
@@ -93,6 +96,7 @@ int main(int argc, char *argv[]) {
 			total = vendasTotais * 0.15;
 			
 			printf("Total a receber: %.2lf", total + salarioFixo);
+			break;
 
 		case 5:	
 			printf("\n\n========== Exercicio 5 ==========\n");
@@ -114,6 +118,7 @@ int main(int argc, char *argv[]) {
 			
 			printf("\nSoma dos valores: %d", soma);
 			printf("\nMedia dos valores: %.2f", media);
+			break;
 		case 6:
 			printf("\n\n========== Exercicio 6 ==========\n");
 			
@@ -129,6 +134,7 @@ int main(int argc, char *argv[]) {
 			dias = idadeDias % 30;
 			
 			printf("Sua idade em Ano(s), Mese(s) e Dia(s) e: %d ano(s) - %d mese(s) - %d dia(s)", anos, meses, dias);
+			break;
 		case 7:	
 			printf("\n\n========== Exercicio 7 ==========\n");
 			
@@ -140,6 +146,7 @@ int main(int argc, char *argv[]) {
 			volume = (4.0/3)* 3.14159 *pow(R, 3);
 			
 			printf("O volume da esfera e de: %.2lf", volume);
+			break;
 		case 8:
 			printf("\n\n========== Exercicio 8 ==========\n");
 			
@@ -160,6 +167,10 @@ int main(int argc, char *argv[]) {
 			distancia = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2)); 
 			
 			printf("Distancia, aplicando a distancia euclidiana: %.2lf", distancia);
+			break;
+		default:
+			printf("Ok, ate mais...");
+			return  0;
 	}	
 	return 0;
 }
