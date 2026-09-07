@@ -2,175 +2,179 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main(int argc, char *argv[]) {
+void exercicio1();
+void exercicio2();
+void exercicio3();
+void exercicio4();
+void exercicio5();
+void exercicio6();
+void exercicio7();
+void exercicio8();
 
-	int opcao;
-	int num1, num2, inversor;
+int main() {
 
-	    printf("\n========== MENU DE EXERCICIOS ==========\n");
-        printf("1 - Numeros em ordem inversa\n");
-        printf("2 - Notacao cientifica\n");
-        printf("3 - Numero em base binaria\n");
-        printf("4 - Salario + comissao\n");
-        printf("5 - Soma, media e produtorio\n");
-        printf("6 - Idade em anos, meses e dias\n");
-        printf("7 - Volume de uma esfera\n");
-        printf("8 - Distancia euclidiana\n");
-        printf("0 - Sair\n");
-        printf("=========================================\n");
-        printf("Escolha uma opcao: ");
-        scanf("%d", &opcao);
+    int opcao;
 
-	
-	switch(opcao){
+    printf("\n========== MENU DE EXERCICIOS ==========\n");
+    printf("1 - Numeros em ordem inversa\n");
+    printf("2 - Notacao cientifica\n");
+    printf("3 - Numero em base binaria\n");
+    printf("4 - Salario + comissao\n");
+    printf("5 - Soma, media e produtorio\n");
+    printf("6 - Idade em anos, meses e dias\n");
+    printf("7 - Volume de uma esfera\n");
+    printf("8 - Distancia euclidiana\n");
+    printf("0 - Sair\n");
+    printf("=========================================\n");
+    printf("Escolha uma opcao: ");
+    scanf("%d", &opcao);
 
-		case 1:	
-			printf("========== Exercicio 1 ==========\n");
-			
-			printf("Digite o primeiro valor: ");
-			scanf("%d", &num1);	
-			
-			printf("Digite o segundo valor: ");
-			scanf("%d", &num2);	
-			
-			inversor = num1;
-			num1 = num2;
-			num2 = inversor;
-			
-			printf("\nValores invertidos: ");
-			printf("\nPrimeiro valor: %d", num1);
-			printf("\nSegundo valor: %d", num2);
+    switch(opcao) {
+        case 1: 
+			exercicio1(); 
 			break;
-		case 2:	
-			printf("\n\n========== Exercicio 2 ==========\n");
-			
-			//importei a biblioteca de matematica para resolver esse exercicio, você disse que não podia usar laços
-			
-		    double valorInicial, numNotacao;
-		    int expoente;
-		    
-		    printf("OBS: importei a biblioteca <math.h> nao sabia se podia ou nao, mas sem laco nao da pra fazer milagre\n\n");
-		
-		    printf("Digite um valor: ");
-		    scanf("%lf", &valorInicial);
-		
-		    expoente = (int)floor(log10(valorInicial));
-		    numNotacao = valorInicial / pow(10, expoente);
-		
-		    printf("\nNumero na forma de notacao cientifica: %.2lf x 10^%d\n", numNotacao, expoente);
+        case 2: 
+			exercicio2(); 
 			break;
-		case 3:
-		    printf("\n\n========== Exercicio 3 ==========\n");
-			
-			 int n, res;
-			 int bit_64, bit_32, bit_16, bit_8, bit_4, bit_2;
-			 printf("insira o valor a ser convertido <= 64: ");
-			 scanf("%d",&n);
-			 
-			 bit_64 = n%2;
-			 res = n/2;
-			 bit_32 = res%2;
-		 	 res = res/2;
-			 bit_16 = res%2;
-			 res = res/2;
-			 bit_8 = res%2;
-			 res = res/2;
-			 bit_4 = res%2;
-			 res = res/2;
-			 bit_2 = res%2;
-			 res = res/2;
-			 
-		 	printf("O numero %d em binario = %d%d%d%d%d%d%d", n, res%2, bit_2, bit_4, bit_8, bit_16, bit_32, bit_64);
-		 	break;
-		case 4:
-		    printf("\n\n========== Exercicio 4 ==========\n");
-		    
-		    double salarioFixo, vendasTotais, total;
-		    
-		    printf("Digite o salario fixo valor: ");
-			scanf("%lf", &salarioFixo);
-			
-			printf("Digite o valor total de vendas: ");
-			scanf("%lf", &vendasTotais);
-			
-			total = vendasTotais * 0.15;
-			
-			printf("Total a receber: %.2lf", total + salarioFixo);
+        case 3: 
+			exercicio3(); 
 			break;
-
-		case 5:	
-			printf("\n\n========== Exercicio 5 ==========\n");
-			
-			int valor1, valor2, valor3, valor4, soma;
-			float media;
-			
-			printf("Digite o primeiro valor: ");
-			scanf("%d", &valor1);	
-			printf("Digite o segundo valor: ");
-			scanf("%d", &valor2);	
-			printf("Digite o terceiro valor: ");
-			scanf("%d", &valor3);	
-			printf("Digite o quarto valor: ");
-			scanf("%d", &valor4);	
-			
-			soma = valor1 + valor2 + valor3 + valor4;
-			media = soma / 4;
-			
-			printf("\nSoma dos valores: %d", soma);
-			printf("\nMedia dos valores: %.2f", media);
+        case 4: 
+			exercicio4(); 
 			break;
-		case 6:
-			printf("\n\n========== Exercicio 6 ==========\n");
-			
-			int idadeDias, anos, meses, dias;
-			
-			printf("Digite sua idade em dias: ");
-			scanf("%d", &idadeDias);
-			
-			anos = idadeDias / 365;
-			idadeDias = idadeDias % 365;
-			
-			meses = idadeDias / 30;
-			dias = idadeDias % 30;
-			
-			printf("Sua idade em Ano(s), Mese(s) e Dia(s) e: %d ano(s) - %d mese(s) - %d dia(s)", anos, meses, dias);
+        case 5: 
+			exercicio5(); 
 			break;
-		case 7:	
-			printf("\n\n========== Exercicio 7 ==========\n");
-			
-			double R, volume;
-			
-			printf("Digite o raio(R) de uma esfera: ");
-			scanf("%lf", &R);
-			
-			volume = (4.0/3)* 3.14159 *pow(R, 3);
-			
-			printf("O volume da esfera e de: %.2lf", volume);
+	    case 6: 
+			exercicio6(); 
 			break;
-		case 8:
-			printf("\n\n========== Exercicio 8 ==========\n");
-			
-			double x1, y1, x2, y2, distancia;
-			
-			printf("Digite o valor de P1\n");
-			printf("x1 = ");
-			scanf("%lf", &x1);
-			printf("y1 = ");
-			scanf("%lf", &y1);
-			
-			printf("Digite o valor de P2\n");
-			printf("x2 = ");
-			scanf("%lf", &x2);
-			printf("y2 = ");
-			scanf("%lf", &y2);
-			
-			distancia = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2)); 
-			
-			printf("Distancia, aplicando a distancia euclidiana: %.2lf", distancia);
+        case 7: 
+			exercicio7();
 			break;
-		default:
+        case 8: 
+			exercicio8(); 
+			break;
+        default: 
 			printf("Ok, ate mais...");
-			return  0;
-	}	
-	return 0;
+    }
+
+    return 0;
+}
+void exercicio1() {
+    int num1, num2, inversor;
+
+    printf("\n========== Exercicio 1 ==========\n");
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &num1);
+    printf("Digite o segundo valor: ");
+    scanf("%d", &num2);
+
+    inversor = num1;
+    num1 = num2;
+    num2 = inversor;
+
+    printf("\nPrimeiro valor: %d", num1);
+    printf("\nSegundo valor: %d", num2);
+}
+void exercicio2() {
+    double valorInicial, numNotacao;
+    int expoente;
+
+    printf("\n========== Exercicio 2 ==========\n");
+    printf("Digite um valor: ");
+    scanf("%lf", &valorInicial);
+
+    expoente = (int)floor(log10(valorInicial));
+    numNotacao = valorInicial / pow(10, expoente);
+
+    printf("Notacao cientifica: %.2lf x 10^%d", numNotacao, expoente);
+}
+void exercicio3() {
+    int n, res;
+    int bit_64, bit_32, bit_16, bit_8, bit_4, bit_2;
+
+    printf("\n========== Exercicio 3 ==========\n");
+    printf("Insira o valor <= 64: ");
+    scanf("%d", &n);
+
+    bit_64 = n % 2;
+    res = n / 2;
+    bit_32 = res % 2;
+    res = res / 2;
+    bit_16 = res % 2;
+    res = res / 2;
+    bit_8 = res % 2;
+    res = res / 2;
+    bit_4 = res % 2;
+    res = res / 2;
+    bit_2 = res % 2;
+    res = res / 2;
+
+    printf("O numero %d em binario = %d%d%d%d%d%d%d", n, res % 2, bit_2, bit_4, bit_8, bit_16, bit_32, bit_64);
+}
+void exercicio4() {
+    double salarioFixo, vendasTotais;
+
+    printf("\n========== Exercicio 4 ==========\n");
+    printf("Digite o salario fixo: ");
+    scanf("%lf", &salarioFixo);
+    printf("Digite o valor total de vendas: ");
+    scanf("%lf", &vendasTotais);
+
+    printf("Total a receber: %.2lf", salarioFixo + vendasTotais * 0.15);
+}
+void exercicio5() {
+    int valor1, valor2, valor3, valor4, soma;
+    float media;
+
+    printf("\n========== Exercicio 5 ==========\n");
+
+    printf("Digite quatro valores: ");
+    scanf("%d %d %d %d", &valor1, &valor2, &valor3, &valor4);
+
+    soma = valor1 + valor2 + valor3 + valor4;
+    media = soma / 4.0;
+
+    printf("\nSoma: %d", soma);
+    printf("\nMedia: %.2f", media);
+}
+void exercicio6() {
+    int idadeDias, anos, meses, dias;
+
+    printf("\n========== Exercicio 6 ==========\n");
+    printf("Digite sua idade em dias: ");
+    scanf("%d", &idadeDias);
+
+    anos = idadeDias / 365;
+    idadeDias = idadeDias % 365;
+    meses = idadeDias / 30;
+    dias = idadeDias % 30;
+
+    printf("Idade: %d ano(s) - %d mes(es) - %d dia(s)", anos, meses, dias);
+}
+void exercicio7() {
+    double R, volume;
+
+    printf("\n========== Exercicio 7 ==========\n");
+    printf("Digite o raio da esfera: ");
+    scanf("%lf", &R);
+
+    volume = (4.0 / 3) * 3.14159 * pow(R, 3);
+
+    printf("Volume da esfera: %.2lf", volume);
+}
+void exercicio8() {
+    double x1, y1, x2, y2, distancia;
+
+    printf("\n========== Exercicio 8 ==========\n");
+
+    printf("Digite x1 e y1: ");
+    scanf("%lf %lf", &x1, &y1);
+
+    printf("Digite x2 e y2: ");
+    scanf("%lf %lf", &x2, &y2);
+
+    distancia = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+
+    printf("Distancia euclidiana: %.2lf", distancia);
 }
