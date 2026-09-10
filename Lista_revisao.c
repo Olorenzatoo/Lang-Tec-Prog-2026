@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
 	
 	int num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, firstValid, secondValid;
 	
-	printf("Digite seu CPF nessa formataçao - x x x . x x x . x x x - x x: \n");
+	printf("Digite seu CPF nessa formataÃ§ao - x x x . x x x . x x x - x x: \n");
 	scanf("%d %d %d . %d %d %d . %d %d %d - %d %d", &num1, &num2, &num3, &num4, &num5, &num6, &num7, &num8, &num9, &num10, &num11);
 	
 	
