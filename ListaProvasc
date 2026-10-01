@@ -87,6 +87,8 @@ void enunciadoProva(int modeloProva) {
             int a, b, c;
             
             a = 6;
+			b = 0;
+			c = 0;
             
             printf("%d - %d - %d", a, b, c);
             c = 1;
