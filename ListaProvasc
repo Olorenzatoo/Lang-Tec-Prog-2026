@@ -83,7 +83,7 @@ void enunciadoProva(int modeloProva) {
             break;
 
         case 3:
-            printf("- Exercicio torre de Hanói -");
+            printf("- Exercicio torre de HanÃ³i -");
             int a, b, c;
             
             a = 6;
