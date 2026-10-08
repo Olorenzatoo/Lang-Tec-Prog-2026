@@ -3,7 +3,7 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int comp_maior (int a, int b){
+int compara (int a, int b){
 	if(a>b)return a;
 	else return b;
 }
@@ -11,7 +11,7 @@ int comp_maior (int a, int b){
 int main(int argc, char *argv[]) {
 	
 	int valor[10];
-	int i;
+	int maior, menor, i;
 	
 	printf("Leia os numeros:\n");
 	
@@ -22,9 +22,16 @@ int main(int argc, char *argv[]) {
 	for(i = 9; i >= 0; i--){
 		printf("%d", valor[i]);
 		if(i > 0){
-			printf("- ");
+			printf(" - ");
 		}
 	}
+	
+	for(i=1, maior=valor[0]; i<5; i=i+2){
+		int comp_temp = compara(valor[i], valor[i + 1]);
+		maior = compara(maior, comp_temp);
+	}
+	
+	printf("\n %d", maior);
 	
 	return 0;
 }
