@@ -1,31 +1,29 @@
+//NÃO ESTÁ PRONTO!!!!!!!!!!
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int main() {
+    int i, j, posicao;
+    int listaNum[10], listaMaior[10];
 
-int main(int argc, char *argv[]) {
-	
-	int i, j, lista[10], listaMaior[10];
-	
-	for(i = 0; i < 10; i++){
-		printf("Escreva o primeiro numero: ", (i + 1));
-		scanf("%d", &lista[i]);
-	}
-	
-	for(i = 0; i < 10; i++){
-		for(j = 0; j < 10; j++){
-			
-			if(lista[i] > lista[j]){
-				listaMaior[i] = lista[i];
-			}
-			
-		}
-		printf("%d", listaMaior[i]);
-	}
-		
-	
-	
-	
-	
-	return 0;
+    for (i = 0; i < 10; i++) {
+        printf("Digite o %dº número: ", i + 1);
+        scanf("%d", &listaNum[i]);
+    }
+
+    int maior = listaNum[0];
+
+    for (i = 0; i < 10; i++) {
+        if (maior < listaNum[i]) {
+            maior = listaNum[i];
+            posicao = i;
+            listaMaior[0] = maior;
+        }
+    }
+
+    printf("\nMaior número encontrado: %d\n", maior);
+
+    return 0;
 }
