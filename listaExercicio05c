@@ -1,8 +1,9 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
+
+   printf("\n Exercicio 1 \n");
 
     int i, j, posicao, maiorValor;
 	int listaNum[100], listaMaior[100], utilizado[100] = {0};
@@ -41,6 +42,23 @@ int main(int argc, char *argv[]) {
     for(i = 99; i >= 0; i--){
         printf("%d ", listaMaior[i]);
     }
+    
+    printf("\nExercicio 2: \n");
+    
+	double numInserido;
+	int expoente = 0;
+	
+	printf("Escreva um numero real: ");
+	scanf("%lf", &numInserido);
+	
+	while(numInserido < 1 || numInserido > 10){
+		numInserido /= 10;
+		expoente++;
+		
+	}
+	
+	printf("O numero em notacao cientifica e: %lfe+%d", numInserido, expoente);
+
 
     return 0;
 }
