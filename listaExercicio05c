@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 void exercicio1();
 void exercicio2();
 void exercicio3();
 void exercicio4();
 void exercicio5();
+void exercicio6();
 int primalidade();
 
 int main() {
@@ -18,6 +20,7 @@ int main() {
     printf("3 - Conversao para binario\n");
     printf("4 - Maior entre 10 valores\n");
     printf("5 - Numeros pares e primos\n");
+    printf("6 - Distancia euclidiana\n");
     printf("0 - Sair\n");
     printf("=========================================\n");
     printf("Escolha uma opcao: ");
@@ -38,6 +41,9 @@ int main() {
             exercicio4();
             break;
         case 5:
+            exercicio5();
+            break;
+        case 6:
             exercicio5();
             break;
         default:
@@ -168,15 +174,15 @@ int primalidade(int valor){
 
 void exercicio5(){
 	
-	int i, j, valores[5];
+	int i, j, valores[100];
 	
 	
-	for(i = 0; i < 5; i++){
+	for(i = 0; i < 100; i++){
         printf("Escreva o %d numero: ", (i + 1));
         scanf("%d", &valores[i]);
     }
     
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < 100; i++){
     	
     	if(valores[i] % 2 == 0){
     		
@@ -196,7 +202,43 @@ void exercicio5(){
 		
 		printf("----------------------------------------\n");
 	}
+}
+
+void exercicio6(){
 	
+	double distancia[10], x1[10], x2[10], y1[10], y2[10];
+	int i;
+	
+	for(i = 0; i < 10; i++){
+        printf("Escreva o %d numero: ", (i + 1));
+        scanf("%lf", &x1[i]);
+    }
+    
+    for(i = 0; i < 10; i++){
+        printf("Escreva o %d numero: ", (i + 1));
+        scanf("%lf", &x2[i]);
+    }
+    
+    for(i = 0; i < 10; i++){
+        printf("Escreva o %d numero: ", (i + 1));
+        scanf("%lf", &y1[i]);
+    }
+    
+    for(i = 0; i < 10; i++){
+        printf("Escreva o %d numero: ", (i + 1));
+        scanf("%lf", &y2[i]);
+    }
+	
+	for(i = 0; i < 10; i++){
+	
+	distancia[i] = sqrt(pow((x2[i] - x1[i]), 2) + pow((y2[i] - y1[i]), 2));
+	
+	}
+	
+	for(i = 0; i < 10; i++){
+        printf("A %d distancia é: %.2lf\n", (i + 1), distancia[i]);
+        printf("----------------------------------------\n");
+    }
 	
 	
 }
