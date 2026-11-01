@@ -8,6 +8,7 @@ void exercicio3();
 void exercicio4();
 void exercicio5();
 void exercicio6();
+void exercicio7();
 int primalidade();
 
 int main() {
@@ -21,6 +22,7 @@ int main() {
     printf("4 - Maior entre 10 valores\n");
     printf("5 - Numeros pares e primos\n");
     printf("6 - Distancia euclidiana\n");
+    printf("7 - Numeros consecutivo\n");
     printf("0 - Sair\n");
     printf("=========================================\n");
     printf("Escolha uma opcao: ");
@@ -44,8 +46,11 @@ int main() {
             exercicio5();
             break;
         case 6:
-            exercicio5();
+            exercicio6();
             break;
+        case 7:
+            exercicio7();
+            break;    
         default:
             printf("Ok, ate mais...");
     }
@@ -239,6 +244,20 @@ void exercicio6(){
         printf("A %d distancia é: %.2lf\n", (i + 1), distancia[i]);
         printf("----------------------------------------\n");
     }
+}
+
+void exercicio7(){
 	
+	int i, j, numeros[5], consc[5];
 	
+	for(i = 0; i < 5; i++){
+        printf("Escreva o %d numero: ", (i + 1));
+        scanf("%d", &numeros[i]);
+    }
+	
+	for(i = 0; i < 4; i++){
+		if((numeros[i] + 1) == numeros[i + 1]){
+			printf("Consecutivos: %d e %d\n", numeros[i], numeros[i + 1]);
+		}
+	}
 }
